@@ -129,7 +129,7 @@ function sound() {
   window.addEventListener("keydown", function (e) {
     var key = e.keyCode;
     var audio = document.querySelector("audio[data-key=\"".concat(key, "\"]"));
-    var btnContainer = audio.nextElementSibling;
+    var btnContainer = document.getElementById(key);
     if (!audio) return;
     audio.currentTime = 0;
     audio.play();
@@ -141,7 +141,7 @@ function sound() {
 }
 
 function soundMobile() {
-  window.addEventListener("keydown", function (e) {
+  window.addEventListener("click", function (e) {
     var target = e.target;
     var key = target.getAttribute("id");
     var audio = document.querySelector("audio[data-key=\"".concat(key, "\"]"));
@@ -193,7 +193,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59740" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61313" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

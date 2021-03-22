@@ -3,7 +3,7 @@ function sound() {
     let key = e.keyCode;
     const audio = document.querySelector(`audio[data-key="${key}"]`);
 
-    const btnContainer = audio.nextElementSibling;
+    const btnContainer = document.getElementById(key);
 
     if (!audio) return;
     audio.currentTime = 0;
@@ -18,7 +18,7 @@ function sound() {
 }
 
 function soundMobile() {
-  window.addEventListener("keydown", function (e) {
+  window.addEventListener("click", function (e) {
     let target = e.target;
 
     let key = target.getAttribute("id");
